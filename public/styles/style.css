@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: beige;
+}
+
+.header-container{
+  width:100%;
+  padding: 10px;
+  background-color: #241f1f;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.title{
+  font-family: 'Merriweather',sans-serif;
+  color: maroon;
+}
+
+.sub-title{
+  color: #2c3e9f;
+}
+
+.posts{
+  width: 80%;
+  padding: 30px;
+  margin: 20px auto;
+  background-color: antiquewhite;
+  border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+a,button{
+  text-decoration: none;
+  font-weight: bolder;
+  color: maroon;
+  border: 2px solid maroon;
+  padding: 10px;
+  border-radius: 2px;
+  margin-left: 70px;
+  margin-bottom: 50px;
+}
+
+input{
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+textarea{
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.create-container{
+  padding: 20px;
+  width: 40%;
+  margin: 20px auto;
+  border: 2px solid maroon;
+  border-radius: 5px;
+  background-color: #deb8879e;
+}
+
+.create-container input,
+.create-container textarea{
+  font-size: large;
+  text-align: center;
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.delete-btn{
+  background-color: maroon;
+  color: white;
+}
+
+
+.delete-btn-form{
+  display: inline;
+}

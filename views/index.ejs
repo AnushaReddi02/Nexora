@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POSTS</title>
+</head>
+<body>
+
+   <%- include("partials/header.ejs")  %>
+    <% for(post of posts){ %>
+
+       <div class="posts">
+          <h2 class="sub-title">@ <%= post.username %></h3>
+          <p><%= post.content %></p>
+          <br /><br />
+          <a href="http://localhost:8080/posts/<%= post.Id %>">VIEW POST</a>
+          <a href="http://localhost:8080/posts/<%= post.Id %>/edit">EDIT POST</a>
+
+          <form class="delete-btn-form" action="/posts/<%= post.Id %>?_method=DELETE" method="POST">
+             <button type="submit" class="delete-btn">DELETE POST</button>
+          </form>
+       </div>
+    <%  } %>
+
+    <br />
+    <br />
+
+     <a href="http://localhost:8080/posts/new">Create Post</a>  <!--when we click on create post it takes us to createPost page -->
+</body>
+</html>

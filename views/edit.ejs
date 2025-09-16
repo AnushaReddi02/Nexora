@@ -1,0 +1,10 @@
+<%- include("partials/header") %>
+<div class="create-container">
+  <h2 class="title">Edit Your Post</h2>
+<p class="sub-title">Post Id : <%= post.Id %></p>
+<h2 class="title">Username : <%= post.username %></h2>
+<form method="POST" action="/posts/<%= post.Id %>?_method=PATCH">
+  <textarea name="content" id="content" rows="10" cols="40"><%= post.content %></textarea>
+  <button>SUBMIT</button>
+</form>
+</div>
