@@ -116,7 +116,7 @@ app.post("/posts",(req,res)=>{
 
 app.get("/posts/:id",(req,res)=>{
   let {id} = req.params;
-  let post = posts.find((p)=>id===p.Id);
+  let post = posts.find((p) => p.Id.toString() === id.toString());
   console.log(id);
   res.render("postWithId",{post,posts});
 });
@@ -126,7 +126,7 @@ app.get("/posts/:id",(req,res)=>{
 app.patch("/posts/:id",(req,res)=>{
     let {id} = req.params;
     let newContent = req.body.content;
-    let post = posts.find((p)=>id===p.Id);
+    let post = posts.find((p) => p.Id.toString() === id.toString());
   if (!post) {
     return res.status(404).send("❌ Post not found");
   }
@@ -137,13 +137,13 @@ app.patch("/posts/:id",(req,res)=>{
 
 app.get("/posts/:id/edit",(req,res)=>{
   let {id} = req.params;
-  let post = posts.find((p)=>id===p.Id);
+ let post = posts.find((p) => p.Id.toString() === id.toString());
   res.render("edit.ejs",{post});
 });
 
 app.delete("/posts/:id",(req,res)=>{
   let {id} = req.params;
-  posts = posts.filter((p)=>id !==p.Id);   //filters all the posts with ids not equal to p.Id and place them in posts array.
+  posts = posts.find((p) => p.Id.toString() === id.toString());   //filters all the posts with ids not equal to p.Id and place them in posts array.
   res.redirect("/posts");
 })
 // Start our server and print a message when it is ready
