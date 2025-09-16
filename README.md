@@ -20,7 +20,7 @@ Nexora is a simple and interactive social posts web application where users can 
 ## Screenshots
 
 ### Posts Page
-![Posts Page Screenshot](nexora-971t.onrender.com_posts.png)
+![Posts Page Screenshot](https://github.com/AnushaReddi02/Nexora/blob/main/nexora-971t.onrender.com_posts.png?raw=true)
 
 ---
 
