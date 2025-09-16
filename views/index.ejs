@@ -14,11 +14,11 @@
           <h2 class="sub-title">@ <%= post.username %></h3>
           <p><%= post.content %></p>
           <br /><br />
-          <a href="http://localhost:8080/posts/<%= post.Id %>">VIEW POST</a>
-          <a href="http://localhost:8080/posts/<%= post.Id %>/edit">EDIT POST</a>
+          <a href="/posts/<%= post.Id %>">VIEW POST</a>
+          <a href="/posts/<%= post.Id %>/edit">EDIT POST</a>
 
           <form class="delete-btn-form" action="/posts/<%= post.Id %>?_method=DELETE" method="POST">
-             <button type="submit" class="delete-btn">DELETE POST</button>
+                <button type="submit" class="delete-btn">DELETE POST</button>
           </form>
        </div>
     <%  } %>
@@ -26,6 +26,6 @@
     <br />
     <br />
 
-     <a href="http://localhost:8080/posts/new">Create Post</a>  <!--when we click on create post it takes us to createPost page -->
+     <a href="/posts/new">CREATE POST</a>  <!--when we click on create post it takes us to createPost page -->
 </body>
 </html>
